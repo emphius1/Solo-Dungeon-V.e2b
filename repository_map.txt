@@ -1,0 +1,40 @@
+```
+- /
+    - repository_map.txt
+    - suggestions.txt
+    - development_process.txt
+    - requirements.txt
+    - /database
+        - db_init.py
+        - db_ops.py
+        - cache.py
+    - /gpt
+        - model_integration.py
+        - prompts.py
+        - tools.py
+        - context_manager.py
+        - dynamic_content.py
+    - /game
+        - core.py
+        - actions.py
+        - character.py
+        - lore.py
+    - /utils
+        - error_handlers.py
+        - spell_lookup.py
+        - campaign_manager.py
+        - save_load.py
+        - settings.py
+        - content_filter.py
+    - /mods
+        - mod_support.py
+    - /data
+        - data_management.py
+    - /tests
+        - unit_tests.py
+        - feedback.py
+    - /docs
+        - README.md
+        - contribution_guidelines.md
+        - changelog.md
+```

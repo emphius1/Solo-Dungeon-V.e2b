@@ -1,0 +1,34 @@
+# Development Process
+
+## Planning and Directory Structure
+We started by understanding the goal and instructions. We then planned and created a directory map for every subdirectory and file needed to finish the project. This helped us visualize the project structure and identify the necessary components.
+
+## Suggestions
+We created a txt file named suggestions.txt to record any ideas or improvements that came up during the development process.
+
+## Database Initialization
+We created a /database directory and developed db_init.py to create the necessary database structure for the game data. We specified tables for characters, quests, AI-generated content, and player saves. We then defined functions in db_ops.py to perform CRUD operations. This allowed us to interact with the database to retrieve, update, delete, and insert data. We also implemented caching mechanisms in cache.py to cache frequently accessed game data for faster retrieval.
+
+## GPT-4-0613 Integration
+In the /gpt directory, we established a connection to the GPT-4-0613 model in model_integration.py. We engineered several system prompts in prompts.py for the models to use to instruct it to use specific tools (functions) for various tasks. We implemented several tools in tools.py for the AI to use to perform various tasks like data management, making dice rolls, and anything else it would need to do as a dungeon master or internal sysadmin/data manager. We ensured the ability to send instructions and retrieve responses.
+
+## Core Game Mechanics
+In the /game directory, we developed the primary game loop in core.py where the player's inputs are processed, and appropriate responses are generated. We scripted the possible actions a player can take within the game in actions.py. We managed character creation, progression, stats, and inventory in character.py. We created and managed in-depth lore, world histories, or character backstories in lore.py to add depth to the game.
+
+## Utility Functions
+In the /utils directory, we created a robust error handling system in error_handlers.py. We implemented flexible spell lookups in spell_lookup.py and added functionality to recognize synonyms or minor misspellings. We managed various campaigns and their unique datasets in campaign_manager.py. We implemented the save and load functions in save_load.py and ensured the game can be saved at any point and can be loaded back to the same state. We created a module for customization settings in settings.py to allow players to tweak game preferences. We developed parental controls and content age-filters in content_filter.py to ensure age-appropriate content generation and provide options for manual review.
+
+## External Mod Support
+In the /mods directory, we ensured the game is designed with modularity to allow external content to be added and integrated seamlessly.
+
+## Data Management
+In the /data directory, we created folders and JSON structures to manage campaigns, player saves, and AI-generated content. We ensured efficient retrieval, update, and management of this data.
+
+## Testing and Feedback
+In the /tests directory, we wrote unit tests for each module and ran comprehensive tests to ensure everything works as intended. We gathered feedback and iterated on the game mechanics, AI interactions, and overall experience.
+
+## Documentation and Deployment
+In the /docs directory, we wrote a thorough README explaining the game's purpose, mechanics, and how to play. We documented the contribution guidelines and a changelog for updates. We prepared the game for deployment, ensuring all dependencies are listed in requirements.txt.
+
+## Final Steps
+We identified how our results compare to the end goal and made changes as necessary. We ensured every line of code we generated was valid and aligned with the project goals.
