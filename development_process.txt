@@ -1,0 +1,52 @@
+# Development Process
+
+## Phase 1: Planning and Design
+- Understand the project requirements and goals.
+- Design the architecture of the application.
+- Identify the shared dependencies across different modules.
+- Plan the database schema for characters, quests, AI-generated content, and player saves.
+
+## Phase 2: Database Initialization
+- Create the database structure necessary for the game data in `db_init.py`.
+- Define functions to perform CRUD operations in `db_ops.py`.
+- Implement caching mechanisms in `cache.py` for faster retrieval of frequently accessed game data.
+
+## Phase 3: GPT-4-0613 Integration
+- Establish a connection to the GPT-4-0613 model in `model_integration.py`.
+- Engineer several system prompts in `prompts.py` for the model to use specific tools for various tasks.
+- Implement several tools in `tools.py` for the AI to use for data management, making dice rolls, etc.
+- Handle the context in which the model operates in `context_manager.py`.
+- Implement mechanisms to store and recall AI-generated content in `dynamic_content.py`.
+
+## Phase 4: Core Game Mechanics
+- Develop the primary game loop in `core.py`.
+- Script the possible actions a player can take within the game in `actions.py`.
+- Manage character creation, progression, stats, and inventory in `character.py`.
+- Create and manage in-depth lore, world histories, or character backstories in `lore.py`.
+
+## Phase 5: Utility Functions
+- Create a robust error handling system in `error_handlers.py`.
+- Implement flexible spell lookups in `spell_lookup.py`.
+- Manage various campaigns and their unique datasets in `campaign_manager.py`.
+- Implement the save and load functions in `save_load.py`.
+- Create a module for customization settings in `settings.py`.
+- Develop parental controls and content age-filters in `content_filter.py`.
+
+## Phase 6: External Mod Support
+- Ensure the game is designed with modularity in `mod_support.py`.
+
+## Phase 7: Data Management
+- Create folders and JSON structures to manage campaigns, player saves, and AI-generated content in `data_management.py`.
+
+## Phase 8: Testing and Feedback
+- Write unit tests for each module in `unit_tests.py`.
+- Gather feedback and iterate on the game mechanics, AI interactions, and overall experience in `feedback.py`.
+
+## Phase 9: Documentation and Deployment
+- Write a thorough README explaining the game's purpose, mechanics, and how to play in `README.md`.
+- Document the contribution guidelines and a changelog for updates in `contribution_guidelines.md` and `changelog.md`.
+- Prepare the game for deployment, ensuring all dependencies are listed in `requirements.txt`.
+
+## Phase 10: Review and Iteration
+- Compare the results with the end goal and make necessary changes.
+- Push all files to GitHub for version control and collaboration.
