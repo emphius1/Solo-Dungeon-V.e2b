@@ -1,5 +1,4 @@
 # Development Process
-
 ## Phase 1: Planning and Design
 - Understand the project requirements and goals.
 - Design the architecture of the application.
