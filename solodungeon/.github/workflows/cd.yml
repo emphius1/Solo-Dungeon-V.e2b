@@ -1,0 +1,56 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install Dependencies
+        run: |
+          cd solodungeon/backend
+          pip install -r requirements.txt
+
+      - name: Build Frontend
+        run: |
+          cd solodungeon/frontend
+          npm install
+          npm run build
+
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: ./solodungeon/Dockerfile
+          push: true
+          tags: user/solodungeon:latest
+
+      - name: Deploy to Cloud Service
+        run: |
+          # Add deployment scripts here
+          # Example for deploying to AWS Elastic Beanstalk
+          # eb deploy --profile default --staged --region us-west-2 MyApp-env
+          # Replace with your cloud service deployment commands
+
+      - name: Notify Deployment Success
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Deployment to production succeeded!'
+            })

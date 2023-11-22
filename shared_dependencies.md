@@ -1,51 +1,97 @@
-# Shared Dependencies
+Shared Dependencies for SoloDungeon:
 
-This document outlines the shared dependencies across the various modules of our text-based RPG game. These dependencies are crucial for the seamless interaction between different parts of the game.
+**Exported Variables**:
+- `characterSchema`
+- `inventorySchema`
+- `combatSchema`
+- `questSchema`
+- `mapSchema`
+- `journalSchema`
+- `bestiarySchema`
+- `npcRelationshipSchema`
+- `gameStateSchema`
+- `playerProgressSchema`
+- `eventSchema`
+- `aiResponseSchema`
 
-## Database Schema
+**Data Schemas**:
+- `CharacterModel`
+- `InventoryModel`
+- `CombatModel`
+- `QuestModel`
+- `MapModel`
+- `JournalModel`
+- `BestiaryModel`
+- `NPCRelationshipModel`
+- `GameStateModel`
+- `PlayerProgressModel`
+- `EventModel`
+- `AIResponseModel`
 
-The structure of the database including tables for characters, quests, AI-generated content, and player saves is shared across the database files (`db_init.py`, `db_ops.py`, `cache.py`) and the game files (`core.py`, `actions.py`, `character.py`, `lore.py`).
+**ID Names of DOM Elements**:
+- `character-creation-form`
+- `character-management-container`
+- `inventory-grid`
+- `combat-interface`
+- `quest-log-list`
+- `map-canvas`
+- `journal-entry-field`
+- `bestiary-list`
+- `npc-relationships-chart`
 
-## GPT-4-0613 Model
+**Message Names**:
+- `CharacterCreated`
+- `InventoryUpdated`
+- `CombatAction`
+- `QuestUpdated`
+- `MapChanged`
+- `JournalEntryAdded`
+- `BestiaryEntryAdded`
+- `NPCRelationshipUpdated`
+- `GameStateSaved`
+- `PlayerProgressUpdated`
+- `EventTriggered`
+- `AIResponseReceived`
 
-The AI model is shared across the GPT integration files (`model_integration.py`, `prompts.py`, `tools.py`, `context_manager.py`, `dynamic_content.py`) and the game files (`core.py`, `actions.py`).
+**Function Names**:
+- `createCharacter`
+- `manageCharacter`
+- `updateInventory`
+- `executeCombat`
+- `logQuest`
+- `updateMap`
+- `addJournalEntry`
+- `addBestiaryEntry`
+- `updateNPCRelationship`
+- `saveGameState`
+- `updatePlayerProgress`
+- `triggerEvent`
+- `getAIResponse`
 
-## Game Data
+**Shared Styles**:
+- `main.css`
 
-The game data including player inputs, AI responses, and game state is shared across the game files (`core.py`, `actions.py`, `character.py`, `lore.py`), utility files (`error_handlers.py`, `spell_lookup.py`, `campaign_manager.py`, `save_load.py`, `settings.py`, `content_filter.py`), and data management file (`data_management.py`).
+**Backend Shared Utilities**:
+- `engineUtils`
+- `llmUtils`
+- `contentManagementUtils`
+- `aiDungeonMasterUtils`
 
-## Error Handling Functions
+**Testing Utilities**:
+- `frontendTestUtils`
+- `backendTestUtils`
 
-The functions for handling errors are shared across all the files.
+**Deployment and CI/CD**:
+- `docker-compose.yml`
+- `Dockerfile`
+- `ci.yml`
+- `cd.yml`
 
-## Spell Lookup Functions
+**Environment Variables**:
+- `.env`
 
-The functions for spell lookups are shared across the game files (`core.py`, `actions.py`, `character.py`, `lore.py`) and the utility file (`spell_lookup.py`).
+**Version Control and Collaboration**:
+- `.gitignore`
+- `README.md`
 
-## Save and Load Functions
-
-The functions for saving and loading game state are shared across the game files (`core.py`, `actions.py`, `character.py`, `lore.py`), utility file (`save_load.py`), and data management file (`data_management.py`).
-
-## Settings
-
-The game settings are shared across the game files (`core.py`, `actions.py`, `character.py`, `lore.py`), utility file (`settings.py`), and data management file (`data_management.py`).
-
-## Content Filter Functions
-
-The functions for content filtering are shared across the game files (`core.py`, `actions.py`, `character.py`, `lore.py`), utility file (`content_filter.py`), and data management file (`data_management.py`).
-
-## Mod Support Functions
-
-The functions for supporting mods are shared across the game files (`core.py`, `actions.py`, `character.py`, `lore.py`) and the mod support file (`mod_support.py`).
-
-## Test Functions
-
-The functions for testing are shared across all the files and the test files (`unit_tests.py`, `feedback.py`).
-
-## Documentation
-
-The documentation is shared across all the files and the documentation files (`README.md`, `contribution_guidelines.md`, `changelog.md`).
-
-## Requirements
-
-The requirements are shared across all the files and the requirements file (`requirements.txt`).
+These shared dependencies will be used across multiple files in the SoloDungeon project to ensure consistency and facilitate communication between the frontend and backend components, as well as within the testing and deployment processes.
