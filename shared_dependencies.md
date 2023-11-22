@@ -1,97 +1,68 @@
-Shared Dependencies for SoloDungeon:
+Shared Dependencies:
 
-**Exported Variables**:
-- `characterSchema`
-- `inventorySchema`
-- `combatSchema`
-- `questSchema`
-- `mapSchema`
-- `journalSchema`
-- `bestiarySchema`
-- `npcRelationshipSchema`
-- `gameStateSchema`
-- `playerProgressSchema`
-- `eventSchema`
-- `aiResponseSchema`
+### Exported Variables:
+- `characterAttributes` (e.g., strength, intelligence, dexterity)
+- `gameMechanics` (e.g., combat rules, skill checks)
+- `themeStyles` (e.g., medievalFantasyTheme)
+- `apiEndpoints` (e.g., assistantsEndpoint, chatCompletionsEndpoint)
+- `contentData` (e.g., D&D official content, custom content)
+- `aiResponses` (e.g., dungeonMasterDialogues, adaptiveResponses)
 
-**Data Schemas**:
-- `CharacterModel`
-- `InventoryModel`
-- `CombatModel`
-- `QuestModel`
-- `MapModel`
-- `JournalModel`
-- `BestiaryModel`
-- `NPCRelationshipModel`
-- `GameStateModel`
-- `PlayerProgressModel`
-- `EventModel`
-- `AIResponseModel`
+### Data Schemas:
+- `CharacterSchema` (for characterModel.py)
+- `GameHistorySchema` (for gameHistoryModel.py)
+- `CampaignSettingsSchema` (for campaignSettingsModel.py)
 
-**ID Names of DOM Elements**:
-- `character-creation-form`
-- `character-management-container`
-- `inventory-grid`
-- `combat-interface`
-- `quest-log-list`
-- `map-canvas`
-- `journal-entry-field`
-- `bestiary-list`
-- `npc-relationships-chart`
+### ID Names of DOM Elements:
+- `characterCreationFormId`
+- `characterManagementContainerId`
+- `combatInterfaceId`
+- `questLogId`
+- `mapContainerId`
+- `journalContainerId`
+- `bestiaryContainerId`
+- `npcRelationshipsContainerId`
 
-**Message Names**:
-- `CharacterCreated`
-- `InventoryUpdated`
-- `CombatAction`
-- `QuestUpdated`
-- `MapChanged`
+### Message Names:
+- `CharacterCreationSuccess`
+- `CharacterUpdateSuccess`
+- `CombatActionExecuted`
+- `QuestLogUpdated`
+- `MapInteraction`
 - `JournalEntryAdded`
-- `BestiaryEntryAdded`
-- `NPCRelationshipUpdated`
-- `GameStateSaved`
-- `PlayerProgressUpdated`
-- `EventTriggered`
-- `AIResponseReceived`
+- `BestiaryAccessed`
+- `NPCInteraction`
 
-**Function Names**:
-- `createCharacter`
-- `manageCharacter`
-- `updateInventory`
-- `executeCombat`
-- `logQuest`
-- `updateMap`
-- `addJournalEntry`
-- `addBestiaryEntry`
-- `updateNPCRelationship`
-- `saveGameState`
-- `updatePlayerProgress`
-- `triggerEvent`
-- `getAIResponse`
-
-**Shared Styles**:
-- `main.css`
-
-**Backend Shared Utilities**:
-- `engineUtils`
-- `llmUtils`
-- `contentManagementUtils`
-- `aiDungeonMasterUtils`
-
-**Testing Utilities**:
-- `frontendTestUtils`
-- `backendTestUtils`
-
-**Deployment and CI/CD**:
-- `docker-compose.yml`
-- `Dockerfile`
-- `ci.yml`
-- `cd.yml`
-
-**Environment Variables**:
-- `.env`
-
-**Version Control and Collaboration**:
-- `.gitignore`
-- `README.md`
-
-These shared dependencies will be used across multiple files in the SoloDungeon project to ensure consistency and facilitate communication between the frontend and backend components, as well as within the testing and deployment processes.
+### Function Names:
+- `createCharacter()`
+- `updateCharacter()`
+- `handleCombat()`
+- `logQuest()`
+- `displayMap()`
+- `addJournalEntry()`
+- `accessBestiary()`
+- `manageNPCRelationships()`
+- `fetchAssistantAction()`
+- `sendChatCompletion()`
+- `validateAccessibility()`
+- `applyThematicElements()`
+- `generateNarrative()`
+- `adaptResponse()`
+- `createDatabaseAdapter()` (with variants for PostgreSQL and MongoDB)
+- `integrateAssistantAPI()`
+- `integrateGPT4_1106_previewAPI()`
+- `createWireframe()`
+- `createMockup()`
+- `createPrototype()`
+- `defineSchema()`
+- `createRESTfulAPI()`
+- `draftIntegrationPlan()`
+- `defineAssistantRoles()`
+- `specifyGPT4_1106_previewUseCases()`
+- `handleAPIInteraction()`
+- `developIntegrationStrategy()`
+- `implementSecurityMeasures()`
+- `setupCloudHosting()`
+- `configureDockerContainerization()`
+- `optimizePerformance()`
+- `conductTesting()`
